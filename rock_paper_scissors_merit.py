@@ -56,3 +56,13 @@ def game_start():
         else:
             draw_count += 1
             print("Round Result: It's a draw!, goot job on you guys")
+
+        print("Current score{user_name}: {player_score} | Computer: {computer_score} | Draws: {draw_count}")
+    print(f"Total Rounds Played: {total_rounds}")
+    print(f"{user_name}: {player_score} | Computer: {computer_score} | Draws: {draw_count}")
+    if player_score > computer_score:
+        print(f"Congratulations {user_name}! You won this game")
+    elif computer_score > player_score:
+        print(f"Computer won the game, the user need some hard work")
+    else:
+        print(f"The game end with draw")
