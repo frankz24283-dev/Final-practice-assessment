@@ -17,10 +17,10 @@ player_name = str(input("Enter your name: ")) #Let the user entered their name
 rounds = int(input("How many rounds would you like to play (1-10)? ")) #Ask user how many rounds do you want play
 player_score = 0    # Get the first start of the score between the computer and user.
 computer_score = 0
-for i in range(rounds):
+for i in range(rounds): #Using the loop to keep lopping this game
     print("\nRound", i + 1)
-    player_choice = input("Choose rock, paper, or scissors: ").lower()
-    computer_descide = random.choice(choices)
+    player_choice = input("Choose rock, paper, or scissors: ").lower() #Let the user to choose what they want to pick
+    computer_descide = random.choice(choices) #The computer gives the random choices, the coomputer automatics to get pick
     print("Computer chose: ", computer_descide)
     result = check_winner(player_choice, computer_descide)
     if result == "player":
