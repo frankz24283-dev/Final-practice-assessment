@@ -22,7 +22,7 @@ for i in range(rounds): #Using the loop to keep lopping this game
     player_choice = input("Choose rock, paper, or scissors: ").lower() #Let the user to choose what they want to pick
     computer_descide = random.choice(choices) #The computer gives the random choices, the coomputer automatics to get pick
     print("Computer chose: ", computer_descide)
-    result = check_winner(player_choice, computer_descide)
+    result = check_winner(player_choice, computer_descide) #Compared the computer results and the user results
     if result == "player":
         print(player_name, "wins this round!")
         player_score = player_score + 1
@@ -31,7 +31,7 @@ for i in range(rounds): #Using the loop to keep lopping this game
         computer_score = computer_score + 1
     else:
         print("It is a draw!")
-    print("Score:", player_name, player_score, "-", computer_score, "Computer")
+    print("Score:", player_name, player_score, "-", computer_score, "Computer") #Given the final results of computers and users
 print("\n--- Game Over ---")
 print("Final Score:")
 print(player_name, ":", player_score)
