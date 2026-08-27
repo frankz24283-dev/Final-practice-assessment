@@ -20,3 +20,11 @@ def get_total_rounds():
             return number_rounds
         else:
             print("Please enter a number between 1 and 10.")
+
+def game_start():
+    user_name = input("Please enter your name: ")
+    total_rounds = get_total_rounds()
+    player_score = 0
+    computer_score = 0
+    draw_count = 0
+    print(f"\nHello {user_name}, starting a {total_rounds}")
