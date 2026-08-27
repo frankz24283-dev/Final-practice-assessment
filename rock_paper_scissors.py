@@ -36,3 +36,10 @@ print("\n--- Game Over ---")
 print("Final Score:")
 print(player_name, ":", player_score)
 print("Computer:", computer_score)
+
+if player_score > computer_score:
+    print(player_name, "won the game!")
+elif computer_score > player_score:
+    print("Computer won the game!")
+else:
+    print("The game is a tie!")
