@@ -5,8 +5,8 @@
   descirption: The game of rock paper scissors
 '''
 import random
-choices = ["rock", "paper", "scissors"]
-def check_winner(player, computer):
+choices = ["rock", "paper", "scissors"] #Set the list of rock paper scissors, let the user and computer easy to pick
+def check_winner(player, computer): #Descided who win the game, check the computer or user win this game
     if player == computer:
         return "draw"
     elif (player == "rock" and computer == "scissors") or (player == "paper" and computer == "rock") or (player == "scissors" and computer == "paper"):
