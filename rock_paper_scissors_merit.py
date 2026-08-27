@@ -41,7 +41,7 @@ def game_start():
 
     for current_round in range(1, total_rounds + 1):
         print(f"\n--- Round {current_round} of {total_rounds}")
-        player_descided = get_player_choice
+        player_descided = get_player_choice()
         computer_descided = random.choice(game_choices)
         print(f"{user_name} picked: {player_descided}")
         print(f"computer picked: {computer_descided}")
@@ -57,7 +57,7 @@ def game_start():
             draw_count += 1
             print("Round Result: It's a draw!, goot job on you guys")
 
-        print("Current score{user_name}: {player_score} | Computer: {computer_score} | Draws: {draw_count}")
+        print(f"Current score{user_name}: {player_score} | Computer: {computer_score} | Draws: {draw_count}")
     print(f"Total Rounds Played: {total_rounds}")
     print(f"{user_name}: {player_score} | Computer: {computer_score} | Draws: {draw_count}")
     if player_score > computer_score:
@@ -66,3 +66,4 @@ def game_start():
         print(f"Computer won the game, the user need some hard work")
     else:
         print(f"The game end with draw")
+game_start()
