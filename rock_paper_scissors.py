@@ -32,3 +32,7 @@ for i in range(rounds):
     else:
         print("It is a draw!")
     print("Score:", player_name, player_score, "-", computer_score, "Computer")
+print("\n--- Game Over ---")
+print("Final Score:")
+print(player_name, ":", player_score)
+print("Computer:", computer_score)
