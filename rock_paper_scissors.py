@@ -23,3 +23,12 @@ for i in range(rounds):
     computer_descide = random.choice(choices)
     print("Computer chose: ", computer_descide)
     result = check_winner(player_choice, computer_descide)
+    if result == "player":
+        print(player_name, "wins this round!")
+        player_score = player_score + 1
+    elif result == "computer":
+        print("Computer wins this round!")
+        computer_score = computer_score + 1
+    else:
+        print("It is a draw!")
+    print("Score:", player_name, player_score, "-", computer_score, "Computer")
