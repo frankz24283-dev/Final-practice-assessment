@@ -13,9 +13,9 @@ def check_winner(player, computer): #Descided who win the game, check the comput
         return "player"
     else:
         return "computer"
-player_name = str(input("Enter your name: "))
-rounds = int(input("How many rounds would you like to play (1-10)? "))
-player_score = 0
+player_name = str(input("Enter your name: ")) #Let the user entered their name
+rounds = int(input("How many rounds would you like to play (1-10)? ")) #Ask user how many rounds do you want play
+player_score = 0    # Get the first start of the score between the computer and user.
 computer_score = 0
 for i in range(rounds):
     print("\nRound", i + 1)
