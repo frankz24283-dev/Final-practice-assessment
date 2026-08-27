@@ -45,3 +45,14 @@ def game_start():
         computer_descided = random.choice(game_choices)
         print(f"{user_name} picked: {player_descided}")
         print(f"computer picked: {computer_descided}")
+
+        winner = determine_round_winner(player_descided, computer_descided)
+        if winner =="player":
+            player_score += 1
+            print(f"Round Result: {user_name} wins!")
+        elif winner == "computer":
+            computer_score += 1
+            print("Round Result: Computer wins!")
+        else:
+            draw_count += 1
+            print("Round Result: It's a draw!, goot job on you guys")
