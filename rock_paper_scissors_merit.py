@@ -5,14 +5,14 @@
   descirption: The game of rock paper scissors
 '''
 import random
-game_choices = ["rock","paper", "scissors"]
+game_choices = ["rock","paper", "scissors"] #Avaiable list for user to choose, rock paper or scissors
 
 def determine_round_winner(player_choice, computer_choice):
     if player_choice == computer_choice:
         return "draw"
 
     if (player_choice == "rock" and computer_choice == "scissors") or (player_choice == "paper" and computer_choice == "rock") or (player_choice == "scissors" and computer_choice == "paper"):
-        return "player"
+        return "player" #Check all three possiable results for player to win the game
     return "computer"
 
 def get_player_choice():
@@ -22,10 +22,10 @@ def get_player_choice():
             return choice
         else:
             print("Invalid move. Please type rock, paper, or scissors.")
-
+# Get and verify the total number of games the player wants to play (within the range of 1 to 10).
 def get_total_rounds():
     while True:
-        number_rounds = int(input("How many rounds would you like to play (1-10)? "))
+        number_rounds = int(input("How many rounds would you like to play (1-10)? ")) #Boundary check if the number between the 1-10.
         if 1 <= number_rounds <= 10:
             return number_rounds
         else:
