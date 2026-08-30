@@ -20,3 +20,12 @@ def get_valid_rounds():
     while True:
         questions_ask_user = f"How many rounds would you like to play ({MIN_ROUNDS- MAX_ROUNDS})"
         user_input = input(questions_ask_user)
+
+        if not user_input():
+            print("Invalid imput! Please enter a valid positive integer. \n")
+        rounds = int(user_input)
+
+        if MIN_ROUNDS <= rounds <= MAX_ROUNDS:
+            return rounds
+        else:
+            print(f"Out of range! Please enter a number between {MIN_ROUNDS} and {MAX_ROUNDS}")
