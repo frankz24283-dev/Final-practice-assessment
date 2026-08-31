@@ -36,3 +36,7 @@ def get_player_choice():
             return choice
         else:
             print("Invalid choice! Please type rock, paper, or scissors.\n")
+def determine_winner(player_descided, computer_descided):
+    if player_descided == computer_descided:
+        return "draw"
+    elif 
