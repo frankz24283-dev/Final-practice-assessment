@@ -29,3 +29,10 @@ def get_valid_rounds(): #Retrieve and verify the number of game rounds, and hand
             return rounds
         else:
             print(f"Out of range! Please enter a number between {MIN_ROUNDS} and {MAX_ROUNDS}")
+def get_player_choice():
+    while True:
+        choice = input("Enter your choice (rock, paper, or scissors): ")
+        if choice == "rock" or choice == "paper" or choice == "scissors":
+            return choice
+        else:
+            print("Invalid choice! Please type rock, paper, or scissors.\n")
