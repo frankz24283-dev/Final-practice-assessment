@@ -59,3 +59,10 @@ def game_start():
     draw_count = 0
 
     print(f"Hello {user_name}, starting a {total_rounds} game")
+
+    for current_round in range(1, total_rounds + 1):
+        print(f"\n--- Round {current_round} of {total_rounds}")
+        player_decided = get_player_choice()
+        computer_decided = random.choice(game_choices)
+        print(f"{user_name} picked: {player_decided}")
+        print(f"Computer picked: {computer_decided}")
