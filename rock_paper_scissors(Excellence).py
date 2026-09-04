@@ -45,3 +45,10 @@ def get_total_rounds():
         if 1 <= number_rounds <= 10:
             return number_rounds
         print("Out of range. Please enter a number between 1 and 10.")
+
+def game_start():
+    while True:
+        user_name = input("Please enter your name: ")
+        if user_name == "":
+            break
+        print("Invalid input. Your name cannot be empty.")
