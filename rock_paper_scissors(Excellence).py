@@ -77,16 +77,24 @@ def game_start():
             draw_count += 1
             print("Round Result: It's a draw!")
 
-        print(
-            f"Current Score - "
-            f"{user_name}: {player_score} | "
-            f"Computer: {computer_score} | "
-            f"Draws: {draw_count}"
+    print(
+        f"Current Score - "
+        f"{user_name}: {player_score} | "
+        f"Computer: {computer_score} | "
+        f"Draws: {draw_count}"
         )
 
-        print(f"Total Rounds Played: {total_rounds}")
-        print(
-            f"{user_name}: {player_score} | "   
-            f"Computer: {computer_score} | "
-            f"Draws: {draw_count}"
+    print(f"Total Rounds Played: {total_rounds}")
+    print(
+        f"{user_name}: {player_score} | "   
+        f"Computer: {computer_score} | "
+        f"Draws: {draw_count}"
         )
+
+    if player_score > computer_score:
+        print(f"Congratulations {user_name}!,you win the game.")
+    elif computer_score > player_score:
+        print("Computer won the game. Getting better next time. ")
+    else:
+        print("The game ended in a draw!")
+game_start()
