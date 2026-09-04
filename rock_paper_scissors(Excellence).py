@@ -73,3 +73,10 @@ def play_game():
 
     print(f"\nWelcome, {name}!")
     print(f"You are going to play {rounds} round(s).\n")
+
+    for round_number in range(1, rounds + 1):
+        player_choice = get_player_choice()
+        computer_choice = get_computer_choice()
+        print(f"You chose: {player_choice}")
+        print(f"Computer chose: {computer_choice}")
+        result = determine_winner(player_choice, computer_choice)
