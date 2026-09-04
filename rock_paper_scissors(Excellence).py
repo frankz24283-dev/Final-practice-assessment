@@ -83,3 +83,10 @@ def game_start():
             f"Computer: {computer_score} | "
             f"Draws: {draw_count}"
         )
+
+        print(f"Total Rounds Played: {total_rounds}")
+        print(
+            f"{user_name}: {player_score} | "   
+            f"Computer: {computer_score} | "
+            f"Draws: {draw_count}"
+        )
