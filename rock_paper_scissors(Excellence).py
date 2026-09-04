@@ -56,3 +56,10 @@ def showing_final_result(name,player_score, computer_score, draws):
     print(f"{name}'s score: {player_score}")
     print(f"Computer's score: {computer_score}")
     print(f"Draws: {draws}")
+
+    if player_score > computer_score:
+        print(f"\nCongratulations {name}! You won the game!")
+    elif computer_score > player_score:
+        print("\nThe computer won the game!")
+    else:
+        print("\nThe game ended in a draw!")
