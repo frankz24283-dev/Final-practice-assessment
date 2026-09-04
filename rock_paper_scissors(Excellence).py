@@ -52,3 +52,10 @@ def game_start():
         if user_name == "":
             break
         print("Invalid input. Your name cannot be empty.")
+
+    total_rounds = get_total_rounds()
+    player_score = 0
+    computer_score = 0
+    draw_count = 0
+
+    print(f"Hello {user_name}, starting a {total_rounds} game")
