@@ -19,3 +19,13 @@ def determine_round_winner(player_choice, computer_choice):
     ):
         return "player"
     return "computer"
+
+def get_player_choice():
+    while True:
+        choice = input( "Enter your choice (rock, paper, or scissors): ").lower
+        if choice == "":
+            print("Invalid input. Your choice cannot be empty.")
+            continue
+        if choice in game_choices:
+            return choice
+        print("Invalid move. Please type rock, paper, or scissors.")
