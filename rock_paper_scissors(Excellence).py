@@ -29,3 +29,13 @@ def get_player_choice():
         if choice in game_choices:
             return choice
         print("Invalid move. Please type rock, paper, or scissors.")
+
+def get_total_rounds():
+    while True:
+        user_input = input("How many rounds would you like to play (1-10)? ")
+        if user_input == "":
+            print("Invalid input. Please enter a number. The input cannot be empty.")
+            continue
+        if not user_input.isdigit():
+            print("Invalid input. Please enter a whole number between 1-10")
+            continue
