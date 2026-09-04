@@ -22,7 +22,7 @@ def determine_round_winner(player_choice, computer_choice):
 
 def get_player_choice():
     while True:
-        choice = input( "Enter your choice (rock, paper, or scissors): ").lower
+        choice = input( "Enter your choice (rock, paper, or scissors): ").lower()
         if choice == "":
             print("Invalid input. Your choice cannot be empty.")
             continue
@@ -46,13 +46,24 @@ def get_total_rounds():
             return number_rounds
         print("Out of range. Please enter a number between 1 and 10.")
 
-def game_start():
+MIN_NAME_LEN = 2
+MAX_NAME_LEN = 20
+
+def get_valid_user_name():
     while True:
         user_name = input("Please enter your name: ")
         if user_name == "":
-            break
-        print("Invalid input. Your name cannot be empty.")
-
+            print("Invalid input! Name cannot be empty.\n")
+            continue
+        if not user_name.isalpha():
+            print("Invalid input! Name must contain letters only (no numbers or symbols).\n")
+            continue
+        if len(user_name) < MIN_NAME_LEN or len(user_name) > MAX_NAME_LEN:
+            print(f"Boundary Error! Name must be between {MIN_NAME_LEN} and {MAX_NAME_LEN} characters long.\n")
+            continue
+        return user_name.capitalize()
+def game_start():
+    user_name = get_valid_user_name()
     total_rounds = get_total_rounds()
     player_score = 0
     computer_score = 0
