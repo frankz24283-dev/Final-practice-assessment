@@ -43,3 +43,16 @@ def get_computer_choice():
 def determine_winner(player_choice, computer_choice):
     if player_choice == computer_choice:
         return "draw"
+    if(
+        (player_choice == "rock" and computer_choice == "scissors")
+        or
+        (player_choice == "paper" and computer_choice == "rock")
+        or
+        (player_choice == "scissors" and computer_choice == "paper")
+    ):
+        return "player"
+    return "computer"
+def showing_final_result(name,player_score, computer_score, draws):
+    print(f"{name}'s score: {player_score}")
+    print(f"Computer's score: {computer_score}")
+    print(f"Draws: {draws}")
