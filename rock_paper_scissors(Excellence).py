@@ -76,3 +76,10 @@ def game_start():
         else:
             draw_count += 1
             print("Round Result: It's a draw!")
+
+        print(
+            f"Current Score - "
+            f"{user_name}: {player_score} | "
+            f"Computer: {computer_score} | "
+            f"Draws: {draw_count}"
+        )
