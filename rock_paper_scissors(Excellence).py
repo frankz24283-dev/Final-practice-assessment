@@ -4,3 +4,6 @@
     version:3.0
     descirption: The game of rock paper scissors
 '''
+import random
+game_choices = ["rock", "paper", "scissors"]
+
