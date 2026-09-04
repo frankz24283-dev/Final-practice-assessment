@@ -21,8 +21,9 @@ def get_valid_rounds(): #Retrieve and verify the number of game rounds, and hand
         questions_ask_user = f"How many rounds would you like to play ({MIN_ROUNDS- MAX_ROUNDS})"
         user_input = input(questions_ask_user)
 
-        if not user_input(): #Check if the input consists entirely of numbers and block non-numeric characters.
+        if not user_input.isdigit(): #Check if the input consists entirely of numbers and block non-numeric characters.
             print("Invalid imput! Please enter a valid positive integer. \n")
+            countine
         rounds = int(user_input)
 
         if MIN_ROUNDS <= rounds <= MAX_ROUNDS:
@@ -36,7 +37,9 @@ def get_player_choice():
             return choice
         else:
             print("Invalid choice! Please type rock, paper, or scissors.\n")
-def determine_winner(player_descided, computer_descided):
-    if player_descided == computer_descided:
+def get_computer_choice():
+    return random.choice(CHOICES)
+
+def determine_winner(player_choice, computer_choice):
+    if player_choice == computer_choice:
         return "draw"
-    elif 
