@@ -63,3 +63,13 @@ def showing_final_result(name,player_score, computer_score, draws):
         print("\nThe computer won the game!")
     else:
         print("\nThe game ended in a draw!")
+
+def play_game():
+    name = get_valid_player_name()
+    rounds = get_valid_rounds()
+    player_score = 0
+    computer_score = 0
+    draws = 0
+
+    print(f"\nWelcome, {name}!")
+    print(f"You are going to play {rounds} round(s).\n")
