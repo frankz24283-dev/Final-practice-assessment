@@ -39,3 +39,9 @@ def get_total_rounds():
         if not user_input.isdigit():
             print("Invalid input. Please enter a whole number between 1-10")
             continue
+
+        number_rounds = int(user_input)
+
+        if 1 <= number_rounds <= 10:
+            return number_rounds
+        print("Out of range. Please enter a number between 1 and 10.")
